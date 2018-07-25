@@ -5,12 +5,13 @@ sap.ui.define([
 ], function(jQuery, Controller, JSONModel){
 	"use strict";
 	
-	var PageController = Controller.extend("mysafety.controllerDashboard", {
+	var PageController = Controller.extend("mysafety.controller.Dashboard", {
 		
 		onInit: function(evt) {
 			var sPath = jQuery.sap.getModulePath("mysafety", "/data/NavigationTileCollection.json");
 			var oModel = new JSONModel(sPath);
-			this.getView().setModel(oModel, "navTiles");
+			console.log(oModel);
+			this.getView().setModel(oModel);
 		}
 	});
 	return PageController;

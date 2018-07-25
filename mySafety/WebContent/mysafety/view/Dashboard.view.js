@@ -15,16 +15,15 @@ sap.ui.jsview("mysafety.view.Dashboard", {
 	createContent : function(oController) {
  		// Create tile navigation
 		var oTileTemp = new sap.m.StandardTile({
-			icon:"{navTiles>/icon}",
-			title:"{navTiles>/title}",
-			info:"{navTiles>/info}"
+			icon:"{navTiles>icon}",
+			title:"{navTiles>title}",
+			info:"{navTiles>info}"
 		});
-		
-		
+				
 		var oNavTileContainer = new sap.m.TileContainer({
-			
+			//tiles:"{NavigationTileCollection}"
 		});
-		oNavTileContainer.bindAggregation("tiles", "navTiles>/NavigationTileCollection", oTileTemp);
+		oNavTileContainer.bindAggregation("tiles", "navTiles>NavigationTileCollection", oTileTemp);
 				
 		var oPage = new sap.m.Page({
 			title: "mySafety",
