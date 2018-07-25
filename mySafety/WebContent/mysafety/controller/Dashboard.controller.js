@@ -1,4 +1,4 @@
-sap.ui.controller("mysafety.Dashboard", {
+sap.ui.controller("mysafety.controller.Dashboard", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
