@@ -13,10 +13,23 @@ sap.ui.jsview("mysafety.view.Dashboard", {
 	* @memberOf mysafety.Dashboard
 	*/ 
 	createContent : function(oController) {
- 		var oPage = new sap.m.Page({
+ 		// Create tile navigation
+		var oTileTemp = new sap.m.StandardTile({
+			icon:"{navTiles>/icon}",
+			title:"{navTiles>/title}",
+			info:"{navTiles>/info}"
+		});
+		
+		
+		var oNavTileContainer = new sap.m.TileContainer({
+			
+		});
+		oNavTileContainer.bindAggregation("tiles", "navTiles>/NavigationTileCollection", oTileTemp);
+				
+		var oPage = new sap.m.Page({
 			title: "mySafety",
 			content: [
-			
+				oNavTileContainer
 			]
 		});
  		return oPage;
